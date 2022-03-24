@@ -1,0 +1,24 @@
+<mat-card class="card"> <!-- container que engloba todo o card-->
+    <mat-card-title>{{ titulo | camelCase }}</mat-card-title>
+    <form class="form-group">
+        <mat-form-field>
+            <input matInput [(ngModel)]="cep.cep" placeholder="Buscar CEP" name="cep">
+            <span *ngIf="estaVazio" style="position: relative; bottom: -32px; color: red; font-size: 0.8rem;">Campo obrigatório.</span>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Logradouro" [value]="cep.logradouro" name="logradouro" disabled>  
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Localidade" [value]="cep.localidade" name="localidade" disabled>  
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="UF" [value]="cep.uf" name="uf" disabled>  
+        </mat-form-field>
+        <button mat-raised-button (click)="buscarCep()" color="accent">
+            Buscar
+        </button>
+    </form>
+</mat-card>

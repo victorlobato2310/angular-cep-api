@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+body {
+    margin: 0 auto;
+    background: #2c3338;
+    color: #646468;
+}
+
+::selection {
+    color: #eee;
+    background-color: #ff4081;
+}
